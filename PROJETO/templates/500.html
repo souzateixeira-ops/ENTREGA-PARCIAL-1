@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Erro no servidor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@500;600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav>
+        <a href="/">Início</a>
+        <a href="/listar">Planos</a>
+        <a href="/adicionar">Adicionar Plano</a>
+    </nav>
+
+    <div class="container">
+        <div class="erro-pagina">
+            <span class="erro-codigo">500</span>
+            <h1>Algo deu errado</h1>
+            <p>Ocorreu um erro inesperado no servidor. Tente novamente em alguns instantes.</p>
+            <a href="/" class="btn btn-primary">Voltar para o início</a>
+        </div>
+    </div>
+
+</body>
+</html>
