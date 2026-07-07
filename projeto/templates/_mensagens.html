@@ -1,0 +1,18 @@
+{# 
+  Esse arquivo é um "pedacinho" de HTML reaproveitado em várias páginas
+  (listar, detalhes, adicionar, editar). Ele pega as mensagens que foram
+  guardadas com flash() lá no controller e mostra na tela.
+
+  'with_categories=true' faz o get_flashed_messages devolver tanto o
+  texto da mensagem quanto a categoria dela ('sucesso' ou 'erro'), que
+  a gente usa pra pintar a mensagem de verde ou vermelho no CSS.
+#}
+{% with mensagens = get_flashed_messages(with_categories=true) %}
+    {% if mensagens %}
+    <div class="mensagens">
+        {% for categoria, texto in mensagens %}
+        <div class="mensagem mensagem-{{ categoria }}">{{ texto }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+{% endwith %}
