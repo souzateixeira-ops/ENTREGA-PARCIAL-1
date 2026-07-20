@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>MANOS ACADEMIA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@500;600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="home-page">
+
+    <nav>
+        <a href="/">Início</a>
+        <a href="/listar">Planos</a>
+        <a href="/adicionar">Adicionar Plano</a>
+    </nav>
+
+    <section class="hero">
+        {% include '_mensagens.html' %}
+
+        <span class="eyebrow">Treine com a gente</span>
+        <h1>Manos Academia</h1>
+        <p>Consulte, adicione e gerencie os planos e modalidades de forma simples e rápida.</p>
+        <a href="/listar" class="btn btn-primary">Ver Planos</a>
+    </section>
+
+</body>
+</html>
